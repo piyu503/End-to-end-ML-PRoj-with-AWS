@@ -7,7 +7,7 @@ def get_requirements(file_path:str)->List[str]:
     '''
     Hyphen="-e ."
     
-    requirements=[]
+
     with open(file_path) as file_obj:
         requirements=file_obj.readlines()
         requirements=[req.replace("\n","") for req in requirements]
@@ -20,5 +20,5 @@ setup(
     author="Piyush",
     author_email="piyush.8548@gmail.com",
     packages=find_packages(),
-    install_requires=get_requirements('Requirement.txt')
+    install_requires=get_requirements('requirements.txt')
 )
